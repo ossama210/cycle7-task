@@ -35,6 +35,10 @@ p {
   gap: 5px;
 }
 
+.footer {
+  height: 100px;
+}
+
 .nav__list li:not(:last-child) {
   border-right: 1px solid black;
 }
@@ -136,4 +140,56 @@ p {
 
 .logocontainer__logo--green:hover {
   background-color: rgb(0, 57, 0);
+}
+
+.stats {
+  width: 80%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fcfcfc;
+}
+
+.stats__header__element:hover {
+  color: rgb(0, 0, 226);
+}
+
+.stats__header {
+  padding: 50px;
+  border-bottom: solid 1px #d7d7d7;
+}
+
+.stats__body {
+  padding: 50px;
+}
+
+.stats__body__table__header {
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.about__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.about__table__row {
+  height: 50px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.about__table__row:nth-child(odd) {
+  background-color: #ececec;
+}
+
+.about__table td {
+  padding-left: 10px;
+}
+
+.about__table__row td:first-child {
+  width: 70%;
 }
