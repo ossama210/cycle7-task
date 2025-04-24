@@ -8,56 +8,57 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul class="nav-list">
-          <li>Home</li>
-          <li>About</li>
-          <li>Rate us</li>
-          <li>Contact</li>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list__element"><a>Home</a></li>
+          <li class="nav__list__element"><a>About</a></li>
+          <li class="nav__list__element"><a>Rate us</a></li>
+          <li class="nav__list__element"><a>Contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <section class="contact">
-        <h2>Me</h2>
-        <hr id="hr" />
+        <h2 class="contact__header">Me</h2>
+        <hr />
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
           accusamus.
         </p>
         <p>Lorem ipsum dolor sit amet.</p>
         <p>Hover the 3 circles below...placeholder for the logos</p>
-        <div class="logo-container">
-          <div class="logo red-logo"></div>
-          <div class="logo green-logo"></div>
-          <div class="logo blue-logo"></div>
+        <div class="logocontainer">
+          <div class="logocontainer__logo--red logo"></div>
+          <div class="logocontainer__logo--green logo"></div>
+          <div class="logocontainer__logo--blue logo"></div>
         </div>
       </section>
       <section class="hero">
         <hr />
         <img
+          class="hero__image"
           src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
           alt="about"
         />
-        <h2>Name Name</h2>
+        <h2 class="hero__header">Name Name</h2>
         <p>email@email.com</p>
         <hr />
       </section>
       <section class="about">
-        <h2>ABOUT</h2>
+        <h2 class="about__header">ABOUT</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nobis
           sequi consequatur! Assumenda, nam expedita.
         </p>
-        <button>Learn More</button>
+        <button class="about__button">Learn More</button>
         <hr />
       </section>
     </main>
-    <footer>
-      <div class="logo-container">
-        <div class="logo red-logo"></div>
-        <div class="logo green-logo"></div>
-        <div class="logo blue-logo"></div>
+    <footer class="footer">
+      <div class="logocontainer">
+        <div class="logocontainer__logo--red logo"></div>
+        <div class="logocontainer__logo--green logo"></div>
+        <div class="logocontainer__logo--blue logo"></div>
       </div>
       <p>Copyright 2025</p>
     </footer>

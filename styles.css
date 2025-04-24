@@ -8,18 +8,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
+.nav {
   background-color: white;
   height: 60px;
   display: flex;
   align-items: center;
 }
 
-li {
+.nav__list__element {
   list-style: none;
 }
 
-h2 {
+.contact__header,
+.herp__header,
+.about__header {
   margin-bottom: 5px;
   text-align: center;
 }
@@ -28,29 +30,25 @@ p {
   margin: 5px;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
   gap: 5px;
 }
 
-.nav-list li:not(:last-child) {
+.nav__list li:not(:last-child) {
   border-right: 1px solid black;
 }
-.nav-list li {
+.nav__list li {
   padding: 0 20px;
 }
 
-img {
+.hero__image {
   width: 250px;
   height: 250px;
   border-radius: 100%;
 }
 
-section {
-  padding: 10px;
-}
-
-main {
+.main {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -89,16 +87,53 @@ main {
   justify-content: space-around;
 }
 
-button {
+.about__button {
   width: 100px;
   background-color: #e7e7e7;
   border: none;
   padding: 0.5em;
+  margin-left: 20px;
 }
 
-button:hover {
+.about__button:hover {
   background-color: rgb(243, 243, 243);
   color: blue;
   border: 1px solid blue;
   cursor: pointer;
+}
+
+.logocontainer {
+  display: flex;
+  margin-left: 20px;
+}
+
+.logo {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+.logocontainer__logo--red {
+  background-color: red;
+}
+
+.logocontainer__logo--red:hover {
+  background-color: rgb(111, 0, 0);
+}
+
+.logocontainer__logo--blue {
+  background-color: blue;
+}
+
+.logocontainer__logo--blue:hover {
+  background-color: rgb(0, 0, 145);
+}
+
+.logocontainer__logo--green {
+  background-color: green;
+}
+
+.logocontainer__logo--green:hover {
+  background-color: rgb(0, 57, 0);
 }
