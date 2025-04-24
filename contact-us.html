@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contact us</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list__element"><a href="index.html">Home</a></li>
+          <li class="nav__list__element"><a>About</a></li>
+          <li class="nav__list__element">
+            <a href="contact-us.html">Contact us</a>
+          </li>
+          <li class="nav__list__element"><a href="stats.html">Stats</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="contact__section">
+        <form class="contact__form">
+          <h2 class="contact__header">Contact Us</h2>
+          <hr />
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="logocontainer">
+        <div class="logocontainer__logo--red logo"></div>
+        <div class="logocontainer__logo--green logo"></div>
+        <div class="logocontainer__logo--blue logo"></div>
+      </div>
+      <p>Copyright 2025</p>
+    </footer>
+  </body>
+</html>
