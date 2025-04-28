@@ -106,7 +106,7 @@ p {
   cursor: pointer;
 }
 
-.logocontainer {
+.logo-container {
   display: flex;
   margin-left: 20px;
 }
@@ -144,9 +144,7 @@ p {
 
 .stats {
   width: 80%;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 40px auto auto 0;
   display: flex;
   flex-direction: column;
   background-color: #fcfcfc;
