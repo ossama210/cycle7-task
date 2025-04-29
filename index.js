@@ -49,7 +49,7 @@ const sortedMovies = data.sort((a, b) => b.rating - a.rating);
 console.log(sortedMovies);
 
 //4 - Create an array of movies released after the year 2000.
-const moviesAfter2000 = data.filter((movie) => movie.year >= 2000);
+const moviesAfter2000 = data.filter((movie) => movie.year > 2000);
 console.log(moviesAfter2000);
 
 //5 - Sort the movies by year of release in ascending order.
@@ -100,9 +100,8 @@ console.log("are all movies released after 1990?", allMoviesNew);
 
 //13 - Find the titles of all movies directed by "Christopher Nolan" that have a rating higher than 8.5, sorted by rating in descending order.
 const nolanMovies = data
-  .filter(
-    (movie) => movie.director === "Christopher Nolan" && movie.rating > 8.5
-  )
+  .filter((movie) => movie.director === "Christopher Nolan")
+  .filter((movie) => movie.rating > 8.5)
   .sort((a, b) => b.rating - a.rating)
   .map((movie) => movie.title);
 
@@ -111,7 +110,8 @@ console.log("Nolan special movies:", nolanMovies);
 //14 - Calculate the average rating of movies released before the year 2000 that belong to the "Drama" genre.
 const avgDramaBefore2000 =
   data
-    .filter((movie) => movie.year < 2000 && movie.genre.includes("Drama"))
+    .filter((movie) => movie.year < 2000)
+    .filter((movie) => movie.genre.includes("Drama"))
     .reduce((acc, movie) => acc + movie.rating, 0) / data.length || 1; // || 1 just in case the array is empty
 console.log("average rating of drama movies before 2000:", avgDramaBefore2000);
 
@@ -124,13 +124,12 @@ const hotTitles_sortedByYear = data
 //16 - Find the number of genres covered by movies with a rating higher than 8.8
 const genresWithHotMovies = data
   .filter((movie) => movie.rating > 8.8)
-  .reduce((acc, movie) => {
-    movie.genre.forEach((genre) => {
-      if (!acc.includes(genre)) {
-        acc.push(genre);
-      }
-    });
-    return acc;
+  .map((movie) => movie.genre)
+  .reduce((acc, genres) => acc.concat(genres), [])
+  .reduce((uniqueGenres, genre) => {
+    return uniqueGenres.includes(genre)
+      ? uniqueGenres
+      : uniqueGenres.concat(genre);
   }, []).length;
 console.log("number of genres with hot movies", genresWithHotMovies);
 
